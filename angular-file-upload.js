@@ -1,16 +1,8 @@
 /*
- Angular File Upload v0.4.0
- https://github.com/nervgh/angular-file-upload
+ angular-file-upload v0.4.2
+ https://github.com/sjorobekov/angular-file-upload
 */
-(function(angular, factory) {
-    if (typeof define === 'function' && define.amd) {
-        define('angular-file-upload', ['angular'], function(angular) {
-            return factory(angular);
-        });
-    } else {
-        return factory(angular);
-    }
-}(angular || null, function(angular) {
+(function(window, angular, undefined) {
 var app = angular.module('angularFileUpload', []);
 
 // It is attached to an element that catches the event drop file
@@ -692,5 +684,4 @@ app.factory('$fileUploader', [ '$compile', '$rootScope', '$http', '$window', fun
     };
 }])
 
-    return app;
-}));
+}(window, window.angular));
